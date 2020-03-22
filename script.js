@@ -1,6 +1,9 @@
-var timer = document.getElementById("counter").textContent;
+var timer = 60;
+
 var countdown = setInterval(function () {
+    document.getElementById("counter").innerHTML = timer;
     timer--;
-    document.getElementById("counter").textContent = timer;
-    if (timer <= 0) clearInterval(countdown);
+    if (timer === 0) {
+        clearInterval(countdown);
+    }
 }, 1000);
