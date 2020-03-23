@@ -1,4 +1,4 @@
-var myQuestions = [
+var questions = [
     {
         question: "Who has won the most Super Bowl MVPs",
         choices: ["Tom Brady", "Joe Montana", "Terry Bradshaw", "Troy Aikman"],

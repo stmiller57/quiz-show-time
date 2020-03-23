@@ -11,14 +11,26 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css">
-
     <title>Questions</title>
 </head>
 
 <body>
+    <!-- Quiz question section -->
     <div class="row">
         <div class="col-sm-9">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Question</h3>
+                    <ul class="list-unstyled">
+                        <li class="answerChoice">a.</li>
+                        <li class="answerChoice">b.</li>
+                        <li class="answerChoice">c.</li>
+                        <li class="answerChoice">d.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
+        <!-- Card for timer -->
         <div class="col-sm-3">
             <div class="card bg-danger text-white" id="clock">
                 <div class="card-body bg-danger text-white">
@@ -28,6 +40,8 @@
             </div>
         </div>
     </div>
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
