@@ -9,4 +9,4 @@ The second page features a two-column row. The first column is where the questio
 My timer appears on the right. I styled it with Boostrap and got it to count down to zero after several fits and starts. 
 
 I'm hoping to go back and improve/finish this project once I have a better grasp of JavaScript syntax. 
-
+![ScreenShot](https://raw.githubusercontent.com/stmiller57/quiz-show-time/master/Assets/Intro.jpg)
