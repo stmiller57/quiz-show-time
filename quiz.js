@@ -1,6 +1,6 @@
 var questions = [
     {
-        question: "Who has won the most Super Bowl MVPs",
+        question: "Who has won the most Super Bowl MVPs?",
         choices: ["Tom Brady", "Joe Montana", "Terry Bradshaw", "Troy Aikman"],
         answer: "Tom Brady"
     },

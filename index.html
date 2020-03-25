@@ -15,37 +15,65 @@
 </head>
 
 <body>
-    <section class="container">
+    <!-- Intro page with Jumbotron -->
+    <section class="container" id="intro">
         <div class="jumbotron">
-            <h1 class="display-4">Enter The Sports Quiz Show</h1>
+            <h1 class="display-4">How Well Do You Know Your Sports?</h1>
             <p class="lead">It's time for you to test your general sports knowledge. Click the button to start a
-                five-question
-                quiz.</p>
+                five-question quiz.</p>
             <p class="lead">You'll have 60 seconds to complete the quiz, but you'll lose time for each incorrect answer.
             </p>
             <p class="lead">Good luck!</p>
-            <a class="btn btn-danger btn-lg" href="quiz1.html" role="button">Start</a>
+            <button type="button" id="start" class="btn btn-info btn-lg btn-danger">Start</button>
         </div>
     </section>
     <br>
-    <!-- <div><a type="button" class="btn btn-primary btn-lg btn-block" href="highscores.html" role="button">High scores</a>
-    </div> -->
 
 
+    <body>
+        <!-- Quiz question section -->
+        <div class="row d-none" id="quiz">
+            <div class="col-sm-9">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title text-center" id="questions">Question</h3>
+                        <ul class="list-unstyled" id="answers">
+                            <li class="answerChoice">a.</li>
+                            <li class="answerChoice">b.</li>
+                            <li class="answerChoice">c.</li>
+                            <li class="answerChoice">d.</li>
+                        </ul>
+                        <div class="alert alert-info" role="alert">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card for timer -->
+            <div class="col-sm-3">
+                <div class="card bg-danger text-white" id="clock">
+                    <div class="card-body bg-danger text-white">
+                        <h4 class="card-title">You're on the clock!</h4>
+                        <span id="counter"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-    <!-- My JavaScript -->
-    <script src="script.js"></script>
-</body>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+        <!-- My JavaScript -->
+        <script src="script.js"></script>
+        <script src="quiz.js"></script>
+
+    </body>
 
 </html>
