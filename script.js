@@ -1,6 +1,6 @@
 var startButton = document.getElementById("start");
 var timer = 60;
-var questionNumber = -1;
+var questionNumber = 0;
 var answer;
 var quizQuestion = document.getElementById("questions");
 var options = document.getElementById("answers");
@@ -10,23 +10,23 @@ startButton.addEventListener("click", startQuiz);
 
 // Function to start quiz and have the questions appear
 function startQuiz() {
-    document.getElementById("intro").classList.add('d-none');
-    document.getElementById("quiz").classList.remove('d-none');
+    document.getElementById("intro").style.display = "none";
+    document.getElementById("quiz").classList.remove("invisible");
     openQuiz();
 }
-// timer function that starts at 60 seconds when questions appear
-var countdown = setInterval(function () {
+// timer that starts at 60 seconds when questions appear
+var clock = setInterval(function () {
     document.getElementById("counter").innerHTML = timer;
     timer--;
-    if (timer < 0) {
-        clearInterval(countdown);
+    if (timer < 0 || questionNumber === questions.length) {
+        clearInterval(clock);
+        setTimeout(scorePage, 800);
     }
 }, 1000);
 
 // Function to cycle through questions and answers
 function openQuiz() {
-    questionNumber++;
-    answer = questions[questionNumber].answer
+    answer = questions[questionNumber].right
 
     quizQuestion.textContent = questions[questionNumber].question;
     options.innerHTML = "";
@@ -34,36 +34,42 @@ function openQuiz() {
     var choices = questions[questionNumber].choices;
 
     for (var i = 0; i < choices.length; i++) {
-        var nextOption = document.createElement("button");
-
-        nextOption.textContent = choices[i]
-        answerButton = options.appendChild(nextOption).setAttribute("class", "p-4 m-2 btn btn-success btn-block");
+        var fillButtons = document.createElement("button");
+        fillButtons.textContent = choices[i]
+        buttonChoices = options.appendChild(fillButtons).setAttribute("class", "btn btn-success mb-2 btn-block");
     }
+    questionNumber++;
 }
 
+// Code to show Bootstrap style alerts for right and wrong answers
 function showAlert() {
     var evalAnswer = document.getElementsByClassName("alert")[0]
-    evalAnswer.removeAttribute;
+    evalAnswer.removeAttribute('style');
 }
 
 function hideAlert() {
     var evalAnswer = document.getElementsByClassName("alert")[0]
-    evalAnswer.style.display;
+    evalAnswer.style.display = 'none';
 }
 
 options.addEventListener("click", function (event) {
     var evalAnswer = document.getElementsByClassName("alert")[0]
     if (answer === event.target.textContent) {
         evalAnswer.innerHTML = "Nailed it!";
-        setTimeout(hideAlert, 1000);
+        setTimeout(hideAlert, 2 * 1000);
         showAlert();
     }
     else {
-        evalAnswer.innerHTML = "That's a brick!";
-        setTimeout(hideAlert, 1000);
+        evalAnswer.innerHTML = "Wrong! That's a brick!";
+        setTimeout(hideAlert, 2 * 1000);
         timer = timer - 10;
         showAlert();
     }
     openQuiz();
-
 });
+
+function scorePage() {
+    document.getElementById("intro").style.display = "none";
+    document.getElementById("quiz").style.display = "none";
+    document.getElementById("scores").classList.remove("invisible");
+};

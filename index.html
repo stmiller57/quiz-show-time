@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Enter The Quiz Show!</title>
+    <title>So You Think You're A Sports Whiz?</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -21,18 +21,17 @@
             <h1 class="display-4">How Well Do You Know Your Sports?</h1>
             <p class="lead">It's time for you to test your general sports knowledge. Click the button to start a
                 five-question quiz.</p>
-            <p class="lead">You'll have 60 seconds to complete the quiz, but you'll lose time for each incorrect answer.
+            <p class="lead">You'll have 60 seconds to complete the quiz, but you'll lose 10 seconds for each incorrect
+                answer.
             </p>
             <p class="lead">Good luck!</p>
             <button type="button" id="start" class="btn btn-info btn-lg btn-danger">Start</button>
         </div>
     </section>
-    <br>
-
 
     <body>
         <!-- Quiz question section -->
-        <div class="row d-none" id="quiz">
+        <div class="row invisible" id="quiz">
             <div class="col-sm-9">
                 <div class="card">
                     <div class="card-body">
@@ -43,7 +42,7 @@
                             <li class="answerChoice">c.</li>
                             <li class="answerChoice">d.</li>
                         </ul>
-                        <div class="alert alert-info" role="alert">
+                        <div class="alert alert-info">
                         </div>
                     </div>
                 </div>
@@ -58,7 +57,10 @@
                 </div>
             </div>
         </div>
-
+        <!-- Score page -->
+        <section id="scores" class="invisible">
+            <h1>SOMETHING GOES HERE</h1>
+        </section>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
