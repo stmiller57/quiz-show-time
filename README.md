@@ -1,15 +1,19 @@
 # quiz-show-time
-## Limited progress
-I struggled mightily with this week's homework. 
+## Slow progress
+This project took a lot of time and research for me to code a workable quiz. I was unable to complete all the functionality but at least produced code that ran through the five-question quiz I designed. 
 
-I was able to execute the timer after several attempts. I created an opening page with a Boostrap Jumbotron that introduced the quiz. Once the start button is clicked, it opens the second page.
+I started with an intro page using a Bootstrap Jumbotron to introduce my five-question sports quiz. I originally had the start button open a second html page, but after discussing the project with classmates and Trilogy instructors, I realized I needed to include most of the html on the index page. 
+![ScreenShot]()
+## Next steps
+I next worked on the JavaScript code to generate questions after the start button is clicked as well as the timer.
 
-![ScreenShot](https://raw.githubusercontent.com/stmiller57/quiz-show-time/master/Assets/Intro.jpg)
+I completed the timer first, placing it to the far right using Bootstrap's grid system. I placed the container for the quiz questions next to it on the left.
 
-The second page features a two-column row. The first column is where the questions should appear. I was unable to get my quiz.js questions to correctly appear as buttons in my html, which was what I was aiming to achieve. 
+The biggest challenge was finding how to hide and show elements based on various click events. I eventually produced a quick that featured three screens in one html page — the intro, the quiz and the finish screens. 
+![ScreenShot]()
+![ScreenShot]()
+## Work to do
+I'm hoping to go back and improve/finish this project once I have a better grasp of local storage. 
 
-My timer appears on the right. I styled it with Boostrap and got it to count down to zero after several fits and starts. 
+While I built the basic part of a form that will take you to another html page where scores will be logged, I ran out of time to add and store scores. 
 
-I'm hoping to go back and improve/finish this project once I have a better grasp of JavaScript syntax. 
-
-![ScreenShot](https://raw.githubusercontent.com/stmiller57/quiz-show-time/master/Assets/Timer.jpg)

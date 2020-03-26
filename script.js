@@ -76,3 +76,6 @@ function scorePage() {
     document.getElementById("quiz").style.display = "none";
     document.getElementById("scores").classList.remove("invisible");
 };
+
+// I still need additional JavaScript to finish this project. The missing code that needs to be added includes a function that will capture scores from the timer and then add the those scores to another html page.  
+// This would be done via local storage, but that's a concept that I still need to better understand. 
