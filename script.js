@@ -1,6 +1,6 @@
 var startButton = document.getElementById("start");
 var timer = 60;
-var questionNumber = 0;
+var questionNum = 0;
 var answer;
 var quizQuestion = document.getElementById("questions");
 var options = document.getElementById("answers");
@@ -18,27 +18,30 @@ function startQuiz() {
 var clock = setInterval(function () {
     document.getElementById("counter").innerHTML = timer;
     timer--;
-    if (timer < 0 || questionNumber === questions.length) {
+    if (timer < 0 || questionNum === questions.length) {
         clearInterval(clock);
-        setTimeout(scorePage, 800);
+        setTimeout(scorePage, 2000);
     }
 }, 1000);
 
 // Function to cycle through questions and answers
-function openQuiz() {
-    answer = questions[questionNumber].right
+// I searched through gitHub for code quiz examples and also spoke with classmates about this homeowrk. The code cited below was particularly helpful to my understanding of the function to make the the questions and answers cycle through it. I have made changes whenever possible to make the code as much mine as I could.
+// [https://github.com/lbernadel/Code-Quiz]
 
-    quizQuestion.textContent = questions[questionNumber].question;
+function openQuiz() {
+    answer = questions[questionNum].right
+
+    quizQuestion.textContent = questions[questionNum].question;
     options.innerHTML = "";
 
-    var choices = questions[questionNumber].choices;
+    var choices = questions[questionNum].choices;
 
     for (var i = 0; i < choices.length; i++) {
         var fillButtons = document.createElement("button");
         fillButtons.textContent = choices[i]
         buttonChoices = options.appendChild(fillButtons).setAttribute("class", "btn btn-success mb-2 btn-block");
     }
-    questionNumber++;
+    questionNum++;
 }
 
 // Code to show Bootstrap style alerts for right and wrong answers
@@ -60,7 +63,7 @@ options.addEventListener("click", function (event) {
         showAlert();
     }
     else {
-        evalAnswer.innerHTML = "Wrong! That's a brick!";
+        evalAnswer.innerHTML = "Survey says — wrong!";
         setTimeout(hideAlert, 2 * 1000);
         timer = timer - 10;
         showAlert();
