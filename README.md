@@ -3,7 +3,7 @@
 This project took a lot of time and research for me to code a workable quiz. I was unable to complete all the functionality but at least produced code that ran through the five-question quiz I designed. 
 
 I started with an intro page using a Bootstrap Jumbotron to introduce my five-question sports quiz. I originally had the start button open a second html page, but after discussing the project with classmates and Trilogy instructors, I realized I needed to include most of the html on the index page. 
-![ScreenShot]()
+![ScreenShot](https://raw.githubusercontent.com/stmiller57/quiz-show-time/master/Assets/intro.png)
 ## Next steps
 I next worked on the JavaScript code to generate questions after the start button is clicked as well as the timer.
 
